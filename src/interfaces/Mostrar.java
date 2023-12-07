@@ -99,25 +99,9 @@ public class Mostrar extends javax.swing.JFrame {
         model.addColumn("Correo");
         model.addColumn("Direccion");
 
-        table.setModel(model);
-
-        String[] dato = new String[5];
-        try{
-        st = conexion.createStatement();
-        ResultSet result = st.executeQuery(sql);
-
-        while (result.next()) {
-         dato[0]=result.getString(1);
-         dato[0]=result.getString(2);
-         dato[0]=result.getString(3);
-         dato[0]=result.getString(4);
-         dato[0]=result.getString(5);
-	 model.addRow(dato);
-        }
-        } catch (SQLException e) {
-            e.printStackTrace();
-    }
-    
+        
+        
+        //table.setViewportView(jTable1);   
     
 }
     
